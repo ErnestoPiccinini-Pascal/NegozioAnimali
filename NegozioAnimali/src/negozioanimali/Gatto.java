@@ -1,13 +1,22 @@
+package negozioanimali;
+
+
+
+
 class Gatto extends Animale {
     private String razza;
 
-    public Gatto(String nome, String razza) {
-        super(nome);
+    public Gatto(String nome,int eta, String razza) {
+        super(nome,eta);
         this.razza = razza;
     }
 
     @Override
-    public void faiVerso() {
-        System.out.println(nome + " (Gatto " + razza + ") dice: Miao!");
+    public String verso() {
+        return (this.getNome() + " (Gatto " + razza + ") dice: Miao!");
+    }
+    @Override
+    public String descrizione() {
+        return (this.getNome() + " (Gatto " + razza + ")");
     }
 }
